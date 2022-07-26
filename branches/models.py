@@ -22,7 +22,7 @@ class Employee(models.Model):
         null=True,
         blank=True,
     )
-    avatar = models.ImageField(upload_to="media/", null=True, blank=True)
+    avatar = models.ImageField(upload_to="employee/", null=True, blank=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"

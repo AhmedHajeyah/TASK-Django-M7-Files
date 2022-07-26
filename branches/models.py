@@ -10,7 +10,8 @@ class Restaurant(models.Model):
     def __str__(self):
         return self.name
 
-
+"""Add an ImageField to our Employee model named avatar, and add a custom upload_to (follow the examples here).
+"""
 class Employee(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
@@ -21,6 +22,7 @@ class Employee(models.Model):
         null=True,
         blank=True,
     )
+    avatar = models.ImageField(upload_to="media/", null=True, blank=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
